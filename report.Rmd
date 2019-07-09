@@ -1,0 +1,19 @@
+---
+title: "CRAN download report: {{pkgname}}"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(dplyr)
+```
+
+```{r}
+{{code}}
+```
+
+
+
+
+
+
