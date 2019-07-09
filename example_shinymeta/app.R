@@ -41,9 +41,9 @@ server <- function(input, output, session) {
       write.csv(downloads(), downloads_data, row.names = FALSE)
       
       ec <- newExpansionContext()
-      ec$substituteMetaReactive(downloads,
-        quote(readr::read_csv("data.csv", col_types = "Ddc"))
-      )
+      ec$substituteMetaReactive(downloads, function() {
+        metaExpr(readr::read_csv("data.csv", col_types = "Ddc"))
+      })
       
       # Generate code
       code <- expandChain(.expansionContext = ec,

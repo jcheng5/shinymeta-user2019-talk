@@ -11,9 +11,3 @@ library(dplyr)
 ```{r}
 {{code}}
 ```
-
-
-
-
-
-
